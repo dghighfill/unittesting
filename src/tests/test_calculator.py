@@ -4,6 +4,7 @@
 import unittest
 from calculator import Calculator
 from exceptions import CalculatorException
+from hamcrest import has_items, assert_that, equal_to
 
 
 class TestCalculator(unittest.TestCase):
@@ -33,7 +34,21 @@ class TestCalculator(unittest.TestCase):
 
         self.assertEquals(str(context.exception), "Power must be turned on")
 
+    def test_add_single_value(self):
+        self.calc.power_on()
+        self.calc.add_number(2)
+        assert_that(self.calc.get_numbers(), has_items(2))
 
+    def test_add_multiple_values(self):
+        self.calc.power_on()
+        self.calc.add_number(2)
+        self.calc.add_number(2)
+        self.calc.add_number(10)
+        assert_that(self.calc.equals(), equal_to(14))
 
-
-
+    def test_add_single_value_with_negative(self):
+        self.calc.power_on()
+        self.calc.add_number(2)
+        self.calc.add_number(-2)
+        self.calc.add_number(10)
+        assert_that(self.calc.equals(), equal_to(10))
