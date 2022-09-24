@@ -21,3 +21,9 @@
 * Install the virtual environment
 * Write test to add an individual number to an Array
 * Sum the items in the array
+
+## Chapter 4 Goals
+What we've built thus far works but now that I have a list I can 
+handle add and subtract in a single method call.
+* Refactor to taking a list of numbers
+* Regression test
