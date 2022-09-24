@@ -16,18 +16,18 @@ class Calculator:
     def power_off(self):
         self.__on = False
 
-    def add(self, value1: int, value2: int):
-        if self.is_on():
-            return value1+value2
-        else:
-            raise CalculatorException("Power must be turned on")
-
     def get_numbers(self):
         return self.__numbers
 
-    def add_number(self, value: int):
+    def add(self, value: int):
         if self.is_on():
             self.__numbers.append(value)
+        else:
+            raise CalculatorException("Power must be turned on")
+
+    def add_numbers(self, numbers: list):
+        if self.is_on():
+            self.__numbers .extend(numbers)
         else:
             raise CalculatorException("Power must be turned on")
 
