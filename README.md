@@ -12,3 +12,5 @@
   * Write a failing test
   * Run Tests
   * Add Implementation 
+    * test for add
+    * raise exception if power isn't on
