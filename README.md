@@ -27,3 +27,8 @@ What we've built thus far works but now that I have a list I can
 handle add and subtract in a single method call.
 * Refactor to taking a list of numbers
 * Regression test
+
+## Chapter 5 Goals
+Add Code Coverage
+* Add dependency
+* Run test with code coverage
