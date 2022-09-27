@@ -1,5 +1,6 @@
 # To run this test from the src directory enter the following on the command line
 # python -m unittest tests/test_calculator.py
+# coverage run --omit="*/tests/*" -m unittest tests/test_calculator.py && coverage html && start ./htmlcov/index.html
 
 import unittest
 from calculator import Calculator

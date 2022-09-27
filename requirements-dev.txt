@@ -1,2 +1,3 @@
 -r requirements.txt
 PyHamcrest==2.0.4
+coverage==6.4.4
