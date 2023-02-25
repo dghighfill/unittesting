@@ -1,7 +1,6 @@
 #!/bin/bash
 
-python -m venv .venv
+pip install pipenv
+pipenv shell
 
-.venv/Scripts/python.exe -m pip install --upgrade pip
-.venv/Scripts/pip3 install pip --upgrade
-.venv/Scripts/pip install -r requirements.txt
+pipenv installp
