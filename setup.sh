@@ -3,4 +3,4 @@
 pip install pipenv
 pipenv shell
 
-pipenv installp
+pipenv install
