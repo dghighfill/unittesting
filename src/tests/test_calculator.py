@@ -4,7 +4,7 @@
 
 import unittest
 from calculator import Calculator
-from exceptions import CalculatorException
+from exceptions import CalculatorException, NumberFormatException
 from hamcrest import has_items, assert_that, equal_to
 
 
@@ -33,7 +33,7 @@ class TestCalculator(unittest.TestCase):
         with self.assertRaises(CalculatorException) as context:
             response = self.calc.add(2)
 
-        self.assertEquals(str(context.exception), "Power must be turned on")
+        self.assertEqual(str(context.exception), "Power must be turned on")
 
     def test_add_single_value(self):
         self.calc.power_on()
@@ -58,3 +58,12 @@ class TestCalculator(unittest.TestCase):
         self.calc.power_on()
         self.calc.add_numbers([2, -2, 10, 5])
         assert_that(self.calc.equals(), equal_to(15))
+
+    def test_add_alpha(self):
+        with self.assertRaises(NumberFormatException) as context:
+            self.calc.power_on()
+            self.calc.add("A")
+            self.calc.add("B")
+            self.calc.equals()
+
+        self.assertEqual(str(context.exception), "The value entered is not a number.")

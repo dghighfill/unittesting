@@ -1,5 +1,4 @@
-from exceptions import CalculatorException
-
+from exceptions import CalculatorException, NumberFormatException
 
 class Calculator:
 
@@ -34,5 +33,8 @@ class Calculator:
     def equals(self):
         total: int = 0
         for value in self.get_numbers():
-            total = total + value
+            if isinstance(value, int):
+                total = total + value
+            else:
+                raise NumberFormatException
         return total
