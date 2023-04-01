@@ -18,7 +18,6 @@
 
 ## Chapter 3 Goals
 * Introduce Hamcrest
-* Add testing requirements-dev.txt
-* Install the virtual environment
+* pipenv install pyhamcrest --dev
 * Write test to add an individual number to an Array
 * Sum the items in the array
