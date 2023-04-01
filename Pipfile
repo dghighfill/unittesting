@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 
 [dev-packages]
+pyhamcrest = "*"
+coverage = "*"
 
 [requires]
 python_version = "3.9"
