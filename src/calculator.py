@@ -28,7 +28,7 @@ class Calculator:
         if self.is_on():
             self.__numbers .extend(numbers)
         else:
-            raise CalculatorException("Power must be turned on")
+            raise CalculatorException()
 
     def equals(self):
         total: int = 0

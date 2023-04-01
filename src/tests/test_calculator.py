@@ -35,6 +35,12 @@ class TestCalculator(unittest.TestCase):
 
         self.assertEqual(str(context.exception), "Power must be turned on")
 
+    def test_wont_add_numbers_power(self):
+        with self.assertRaises(CalculatorException) as context:
+            self.calc.add_numbers([2,2])
+
+        self.assertEqual(str(context.exception), "A Calculator Exception has occurred.")
+
     def test_add_single_value(self):
         self.calc.power_on()
         self.calc.add(2)
