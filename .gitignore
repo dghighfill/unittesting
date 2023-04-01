@@ -1,6 +1,6 @@
-.idea/
 .venv/
 .coverage
 src/htmlcov/
 *.pyc
+.idea/
 Pipfile.lock
