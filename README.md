@@ -2,6 +2,6 @@
 
 ## Chapter 1 Goals
 
-* Create a requirements.txt file
-* Build a virtual environment
+* Install pipenv to create a virtual environment
+* Open pipenv shell
 * Define a class that we can test

@@ -3,3 +3,4 @@
 src/htmlcov/
 *.pyc
 .idea/
+Pipfile.lock
